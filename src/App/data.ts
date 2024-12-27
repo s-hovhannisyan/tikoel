@@ -25,8 +25,33 @@ const sections = [
     ],
   },
   {
-    id: 'what-we-offer-2',
-    heading: 'What We Offer',
+    id: 'our-projects',
+    heading: 'Our projects',
+    subheading: 'Expert Equipment',
+    cards: [
+      {
+        icon: '/images/metal-fabrication.jpeg',
+        title: 'Metal Fabrication',
+        description:
+          'We can fabricate any metal component, from simple repairs to complex structures.',
+      },
+      {
+        icon: '/images/on-site-welding.jpeg',
+        title: 'On-Site Welding',
+        description:
+          'Our mobile welding services bring our expertise directly to your location, saving you time and effort.',
+      },
+      {
+        icon: '/images/welding-repair.jpeg',
+        title: 'Welding Repair',
+        description:
+          'We offer expert repair services for a wide range of metal items, including machinery, equipment, and art.',
+      },
+    ],
+  },
+  {
+    id: 'our-partners',
+    heading: 'Our Partners',
     subheading: 'Comprehensive Welding Solutions',
     cards: [
       {

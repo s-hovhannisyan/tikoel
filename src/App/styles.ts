@@ -58,7 +58,7 @@ const useStyles = createUseStyles({
   sections: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '3rem',
+    // gap: '3rem',
     // backgroundColor: ({ theme }: StyleProps) => theme.colors.secondary,
   },
 });

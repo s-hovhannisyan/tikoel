@@ -4,6 +4,7 @@ export interface CustomTheme {
     secondary: string;
     white: string;
     dark: string;
+    yellow: string;
   };
   typography: {
     fontFamily: string;

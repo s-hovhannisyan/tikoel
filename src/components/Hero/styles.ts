@@ -14,6 +14,10 @@ const useStyles = createUseStyles({
     justifyContent: 'center',
     color: ({ theme }: StyleProps) => theme.colors.white,
     padding: '0 2rem',
+    margin: '0 auto',
+    '@media (max-width: 768px)': {
+      height: '100vh',
+    },
   },
   title: {
     fontFamily: 'Phudu',

@@ -7,6 +7,10 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
     backgroundColor: theme.colors.primary,
     padding: '1rem 2rem 4rem 2rem',
     textAlign: 'center',
+    minHeight: '50vh',
+    borderBottomStyle: 'solid',
+    borderBottomWidth: '1px',
+    borderBottomColor: '#d6d6d6', // theme.colors.dark,
   },
   heading: {
     color: theme.colors.dark,
@@ -37,8 +41,11 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
     padding: '2rem',
     backgroundColor: theme.colors.white,
     borderRadius: 10,
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 4px 20px 3px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.3s ease',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     '&:hover': {
       transform: 'translateY(-5px)',
     },
@@ -50,6 +57,14 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
       color: theme.colors.dark,
       marginBottom: '1rem',
     },
+  },
+  icon: {
+    width: 150,
+    height: 150,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    borderRadius: 10,
   },
 }));
 

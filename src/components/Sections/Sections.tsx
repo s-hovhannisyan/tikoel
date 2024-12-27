@@ -29,7 +29,7 @@ const Sections: React.FC<SectionsProps> = ({
       <div className={classes.grid}>
         {cards.map((card) => (
           <div className={classes.card} key={card.title}>
-            <img src={card.icon} alt={card.title} />
+            <div className={classes.icon} style={{ backgroundImage: `url(${card.icon})` }} />
             <h4>{card.title}</h4>
             <p>{card.description}</p>
           </div>

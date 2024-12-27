@@ -9,9 +9,11 @@ import Navbar from 'components/Navbar';
 import Hero from 'components/Hero';
 import Sections from 'components/Sections';
 import Footer from 'components/Footer';
-import useStyles from './styles';
+import ContactUs from 'components/ContactUs';
 import { useGlobalFonts } from 'styles/fonts';
 import theme from 'styles/theme';
+
+import useStyles from './styles';
 import sections from './data';
 
 const App: React.FC = () => {
@@ -55,16 +57,15 @@ const App: React.FC = () => {
           <Navbar withBackground={isOutOfViewport} />
           <Hero ref={heroRef} />
           <div className={classes.sections}>
-            {sections.map((section, index) => {
-
+            {sections.map((section) => {
               return (
                 <Sections key={section.id} {...section} />
               )
             })}
           </div>
+          <ContactUs />
           <Footer />
         </div>
-        <div></div>
       </Router>
     </ThemeProvider>
   );

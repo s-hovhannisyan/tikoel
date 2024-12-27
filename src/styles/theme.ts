@@ -2,10 +2,11 @@ import { CustomTheme } from '../types';
 
 const theme: CustomTheme = {
   colors: {
-    primary: 'rgb(255, 222, 89)',
+    primary: '#ffffff', // rgb(255, 222, 89)',
     secondary: '#0A1929',
     white: '#FFFFFF',
     dark: '#333333',
+    yellow: 'rgb(255, 222, 89)',
   },
   typography: {
     fontFamily: 'Montserrat, sans-serif',
