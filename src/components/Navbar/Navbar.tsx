@@ -18,7 +18,7 @@ const Navbar: React.FC = ({ withBackground = false }: { withBackground?: boolean
     <nav className={menuStyle}>
       <div className={classes.container}>
         <div className={classes.logo}>
-          <img src="/tikoel/images/logo.png" alt="Tikoel Logo" />
+          <img src="/images/logo.png" alt="Tikoel Logo" />
         </div>
         <div className={classes.navLinks}>
           <Link to="/">Home</Link>

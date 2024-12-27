@@ -5,19 +5,19 @@ const sections = [
     subheading: 'Comprehensive Welding Solutions',
     cards: [
       {
-        icon: '/tikoel/images/safety.svg',
+        icon: '/images/safety.svg',
         title: 'Safety First',
         description:
           'We prioritize safety and adhere to strict safety protocols in every aspect of our work.',
       },
       {
-        icon: '/tikoel/images/skills.svg',
+        icon: '/images/skills.svg',
         title: 'Skilled Craftsmanship',
         description:
           'Our highly trained welders can perform a wide range of welding services, from minor repairs to major fabrications.',
       },
       {
-        icon: '/tikoel/images/advanced.svg',
+        icon: '/images/advanced.svg',
         title: 'Advanced Technology',
         description:
           'We invest in the latest welding technology to deliver high-quality results and efficient service.',
@@ -30,19 +30,19 @@ const sections = [
     subheading: 'Comprehensive Welding Solutions',
     cards: [
       {
-        icon: '/tikoel/images/safety.svg',
+        icon: '/images/safety.svg',
         title: 'Safety First',
         description:
           'We prioritize safety and adhere to strict safety protocols in every aspect of our work.',
       },
       {
-        icon: '/tikoel/images/skills.svg',
+        icon: '/images/skills.svg',
         title: 'Skilled Craftsmanship',
         description:
           'Our highly trained welders can perform a wide range of welding services, from minor repairs to major fabrications.',
       },
       {
-        icon: '/tikoel/images/advanced.svg',
+        icon: '/images/advanced.svg',
         title: 'Advanced Technology',
         description:
           'We invest in the latest welding technology to deliver high-quality results and efficient service.',

@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
       placeItems: 'center',
       minWidth: '320px',
       minHeight: '100vh',
-      backgroundImage: 'url(/tikoel/images/background.jpeg)',
+      backgroundImage: 'url(/images/background.jpeg)',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundAttachment: 'fixed',
