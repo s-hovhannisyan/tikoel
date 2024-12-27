@@ -14,7 +14,7 @@ export default defineConfig({
   server: {
     port: 3000,
     fs: {
-      allow: ['/'],
+      allow: ['src/assets'],
       strict: false,
     },
   },
