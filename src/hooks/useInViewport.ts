@@ -9,12 +9,17 @@ const useInViewport = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref?.current) {
       const rect = ref.current.getBoundingClientRect();
       const isVisible = (
-        rect.top >= -50 &&
+        rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
-      setIsInViewport(isVisible ? ref?.current?.dataset.id : null);
+
+      if (ref?.current?.dataset.id === 'what-we-offer' && (rect.top >= (window.innerHeight || document.documentElement.clientHeight) / 4)) {
+        setIsInViewport(null);
+      } else {
+        setIsInViewport(isVisible ? ref?.current?.dataset.id : null);
+      }
     }
   }, [ref]);
 

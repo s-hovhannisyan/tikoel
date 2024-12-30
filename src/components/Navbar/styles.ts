@@ -39,6 +39,7 @@ const useStyles = createUseStyles({
     },
   },
   logo: {
+    cursor: 'pointer',
     '& img': {
       transition: 'height 0.1s ease',
       height: ({ withBackground }: StyleProps) => (withBackground ? 40 : 80),

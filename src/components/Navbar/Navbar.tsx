@@ -60,7 +60,7 @@ const Navbar: React.FC<NavbarProps> = ({ withBackground = false, sections, activ
   return (
     <nav className={menuStyle}>
       <div className={classes.container}>
-        <div className={classes.logo}>
+        <div className={classes.logo} onClick={() => jumpToSection('hero')}>
           <img src="/images/logo.png" alt="Tikoel Logo" />
         </div>
         

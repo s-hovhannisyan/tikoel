@@ -12,7 +12,7 @@ type SectionsProps = {
     title: string;
     description: string;
   }[];
-  setActiveNav: (nav: string) => void;
+  setActiveNav: (nav: string | null) => void;
   setSectionsElements: (elements: HTMLDivElement | null) => void;
 };
 
@@ -33,6 +33,8 @@ const Sections = ({
   useEffect(() => {
     if (isInViewport) {
       setActiveNav(id);
+    } else {
+      setActiveNav(null);
     }
   }, [isInViewport, setActiveNav, id]);
 
