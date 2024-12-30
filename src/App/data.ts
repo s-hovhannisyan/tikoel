@@ -3,6 +3,10 @@ const sections = [
     id: 'what-we-offer',
     heading: 'What We Offer',
     subheading: 'Comprehensive Welding Solutions',
+    navigation: {
+      title: 'What We Offer',
+      link: 'what-we-offer',
+    },
     cards: [
       {
         icon: '/images/safety.svg',
@@ -28,6 +32,10 @@ const sections = [
     id: 'our-projects',
     heading: 'Our projects',
     subheading: 'Expert Equipment',
+    navigation: {
+      title: 'Projects',
+      link: 'projects',
+    },
     cards: [
       {
         icon: '/images/metal-fabrication.jpeg',
@@ -53,6 +61,10 @@ const sections = [
     id: 'our-partners',
     heading: 'Our Partners',
     subheading: 'Comprehensive Welding Solutions',
+    navigation: {
+      title: 'Partners',
+      link: 'partners',
+    },
     cards: [
       {
         icon: '/images/safety.svg',

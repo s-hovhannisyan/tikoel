@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'react-jss';
 
@@ -19,11 +19,14 @@ import sections from './data';
 const App: React.FC = () => {
   useGlobalFonts();
   const classes = useStyles({ theme });
+  const [activeNav, setActiveNav] = useState<string | null>(null);
+  const [, setSectionsElements] = useState<HTMLDivElement[] | null[] | null>(null);
 
   const heroRef = useRef<HTMLDivElement>(null);
+
   const [isOutOfViewport, setIsOutOfViewport] = useState(false);
 
-  const checkVisibility = () => {
+  const checkVisibility = useCallback(() => {
     if (heroRef.current) {
       const rect = heroRef.current.getBoundingClientRect();
       const out =
@@ -34,7 +37,13 @@ const App: React.FC = () => {
 
       setIsOutOfViewport(out);
     }
-  };
+  }, []);
+
+  const setNewSectionsElements = useCallback((elements: HTMLDivElement | null) => {
+    if (elements) {
+      setSectionsElements((prevElements: HTMLDivElement[] | null[] | null) => [...(prevElements || []), elements]);
+    }
+  }, []);
 
   useEffect(() => {
     // Initial check
@@ -48,18 +57,18 @@ const App: React.FC = () => {
       window.removeEventListener('scroll', checkVisibility);
       window.removeEventListener('resize', checkVisibility);
     };
-  }, []);
+  }, [checkVisibility]);
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <div className={classes.app}>
-          <Navbar withBackground={isOutOfViewport} />
+          <Navbar withBackground={isOutOfViewport} sections={sections} activeNav={activeNav} />
           <Hero ref={heroRef} />
           <div className={classes.sections}>
             {sections.map((section) => {
               return (
-                <Sections key={section.id} {...section} />
+                <Sections key={section.id} {...section} setActiveNav={setActiveNav} setSectionsElements={setNewSectionsElements} />
               )
             })}
           </div>

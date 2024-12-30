@@ -1,14 +1,34 @@
-import React, { useCallback, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 
 import theme from 'styles/theme';
 
 import useStyles from './styles';
 
-const Navbar: React.FC = ({ withBackground = false }: { withBackground?: boolean }) => {
+type NavbarProps = {
+  withBackground?: boolean;
+  sections: {
+    id: string;
+    heading: string;
+    subheading: string;
+    navigation: {
+      title: string;
+      link: string;
+    };
+  }[];
+  activeNav: string | null;
+};
+
+const Navbar: React.FC<NavbarProps> = ({ withBackground = false, sections, activeNav }: NavbarProps) => {
   const [isActive, setIsActive] = useState(false);
   const classes = useStyles({ theme, withBackground });
+
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    jumpToSection(hash.replace('#', ''))
+  }, []);
 
   const handleMenuBurgerClick = useCallback(() => {
     setIsActive(!isActive);
@@ -29,6 +49,14 @@ const Navbar: React.FC = ({ withBackground = false }: { withBackground?: boolean
     active: isActive,
   });
 
+  const jumpToSection = useCallback((sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    setIsActive(false)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <nav className={menuStyle}>
       <div className={classes.container}>
@@ -43,10 +71,9 @@ const Navbar: React.FC = ({ withBackground = false }: { withBackground?: boolean
 
           <div className={menuBackgroundClasses} onClick={handleMenuBurgerClick} />
           <div className={navLinksClasses}>
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/partners">Partners</Link>
-            <Link to="/contact">Contact</Link>
+            {sections.map((section) => (
+              <a key={section.id} className={activeNav === section.id ? 'active' : ''} onClick={() => jumpToSection(section.id)}>{section.navigation.title}</a>
+            ))}
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
-import React from 'react';
-
+import { useEffect, useRef } from 'react';
 import useStyles from './styles';
+
+import useInViewport from 'hooks/useInViewport';
 
 type SectionsProps = {
   heading: string;
@@ -11,18 +12,38 @@ type SectionsProps = {
     title: string;
     description: string;
   }[];
+  setActiveNav: (nav: string) => void;
+  setSectionsElements: (elements: HTMLDivElement | null) => void;
 };
 
-const Sections: React.FC<SectionsProps> = ({
+const Sections = ({
   heading,
   subheading,
-  cards,
   id,
+  cards,
+  setActiveNav,
+  setSectionsElements,
 }: SectionsProps) => {
   const classes = useStyles();
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  const { isInViewport } = useInViewport(ref);
+
+  useEffect(() => {
+    if (isInViewport) {
+      setActiveNav(id);
+    }
+  }, [isInViewport, setActiveNav, id]);
+
+  useEffect(() => {
+    if (ref.current) {
+      setSectionsElements(ref.current);
+    }
+  }, [setSectionsElements]);
+
   return (
-    <section className={classes.section} data-id={id} key={id}>
+    <section className={classes.section} data-id={id} key={id} ref={ref} id={id}>
       <h2 className={classes.heading}>{heading}</h2>
       <h3 className={classes.subheading}>{subheading}</h3>
       

@@ -124,6 +124,7 @@ const useStyles = createUseStyles({
       },
     },
     '& a': {
+      cursor: 'pointer',
       backgroundColor: 'transparent',
       color: ({ theme }: StyleProps) => theme.colors.primary,
       borderStyle: 'solid',
@@ -133,7 +134,7 @@ const useStyles = createUseStyles({
       textDecoration: 'none',
       fontWeight: 500,
       transition: 'background-color 0.3s ease, padding 0.1s ease, color 0.3s ease',
-      '&:hover': {
+      '&:hover, &.active': {
         backgroundColor: ({ theme }: StyleProps) => theme.colors.primary,
         color: ({ theme }: StyleProps) => theme.colors.dark,
       },
