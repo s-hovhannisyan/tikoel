@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className={classes.footer}>
-      <p>asd</p>
+      <p></p>
       <p>© 2024. All Rights Reserved.</p>
       <div className={classes.socialLinks}>
         <a href="#facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
