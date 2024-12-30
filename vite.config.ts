@@ -21,6 +21,9 @@ export default defineConfig({
   preview: {
     port: 3000,
   },
+  build: {
+    outDir: 'docs',
+  },
   resolve: {
     alias: {
       ...topLevelDirectories.reduce((m: Record<string, string>, directory: string) => {
