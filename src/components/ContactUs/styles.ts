@@ -35,6 +35,9 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
     fontSize: '2.5rem',
     lineHeight: '1rem',
     color: theme.colors.yellow,
+    '@media (max-width: 768px)': {
+      fontSize: '1.5rem',
+    },
     '& a': {
       color: 'inherit',
       textDecoration: 'inherit',

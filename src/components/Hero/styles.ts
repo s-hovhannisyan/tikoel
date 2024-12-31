@@ -24,6 +24,9 @@ const useStyles = createUseStyles({
     fontSize: '4rem',
     marginBottom: '1rem',
     letterSpacing: '2px',
+    '@media (max-width: 768px)': {
+      fontSize: '2rem',
+    },
   },
   subtitle: {
     fontFamily: 'Jost',
