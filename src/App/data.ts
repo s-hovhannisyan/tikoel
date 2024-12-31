@@ -2,7 +2,7 @@ const sections = [
   {
     id: 'what-we-offer',
     heading: 'What We Offer',
-    subheading: 'Comprehensive Welding Solutions',
+    subheading: 'Comprehensive Solutions',
     navigation: {
       title: 'What We Offer',
       link: 'what-we-offer',
@@ -18,13 +18,13 @@ const sections = [
         icon: '/images/skills.svg',
         title: 'Skilled Craftsmanship',
         description:
-          'Our highly trained welders can perform a wide range of welding services, from minor repairs to major fabrications.',
+          'Our highly trained welders can perform a wide range of services, from minor repairs to major fabrications.',
       },
       {
         icon: '/images/advanced.svg',
         title: 'Advanced Technology',
         description:
-          'We invest in the latest welding technology to deliver high-quality results and efficient service.',
+          'We invest in the latest technology to deliver high-quality results and efficient service.',
       },
     ],
   },
@@ -60,7 +60,7 @@ const sections = [
   {
     id: 'our-partners',
     heading: 'Our Partners',
-    subheading: 'Comprehensive Welding Solutions',
+    subheading: 'Comprehensive Solutions',
     navigation: {
       title: 'Partners',
       link: 'partners',

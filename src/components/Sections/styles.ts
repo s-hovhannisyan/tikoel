@@ -61,7 +61,7 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
   icon: {
     width: 150,
     height: 150,
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     borderRadius: 10,
