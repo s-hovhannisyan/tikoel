@@ -24,14 +24,21 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
     marginBottom: '3rem',
   },
   title: {
+    fontFamily: 'Phudu',
     fontSize: '2.5rem',
     fontWeight: 'bold',
     color: 'white',
     marginBottom: '0.5rem',
   },
   subtitle: {
-    fontSize: '1.25rem',
-    color: 'white',
+    fontFamily: 'Jost',
+    fontSize: '2.5rem',
+    lineHeight: '1rem',
+    color: theme.colors.yellow,
+    '& a': {
+      color: 'inherit',
+      textDecoration: 'inherit',
+    },
   },
   formWrapper: {
     maxWidth: '56rem',

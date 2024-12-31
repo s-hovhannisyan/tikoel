@@ -9,7 +9,7 @@ import Navbar from 'components/Navbar';
 import Hero from 'components/Hero';
 import Sections from 'components/Sections';
 import Footer from 'components/Footer';
-// import ContactUs from 'components/ContactUs';
+import ContactUs from 'components/ContactUs';
 import { useGlobalFonts } from 'styles/fonts';
 import theme from 'styles/theme';
 
@@ -72,7 +72,7 @@ const App: React.FC = () => {
               )
             })}
           </div>
-          {/* <ContactUs /> */}
+          <ContactUs setActiveNav={setActiveNav} setSectionsElements={setNewSectionsElements} />
           <Footer />
         </div>
       </Router>

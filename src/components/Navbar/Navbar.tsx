@@ -74,6 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ withBackground = false, sections, activ
             {sections.map((section) => (
               <a key={section.id} className={activeNav === section.id ? 'active' : ''} onClick={() => jumpToSection(section.id)}>{section.navigation.title}</a>
             ))}
+            <a className={activeNav === 'contact-us' ? 'active' : ''} onClick={() => jumpToSection('contact-us')}>Contact Us</a>
           </div>
         </div>
       </div>
