@@ -33,8 +33,9 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
   subtitle: {
     fontFamily: 'Jost',
     fontSize: '2.5rem',
-    lineHeight: '1rem',
+    margin: 0,
     color: theme.colors.yellow,
+    textAlign: 'left',
     '@media (max-width: 768px)': {
       fontSize: '1.5rem',
     },
@@ -42,6 +43,13 @@ const useStyles = createUseStyles((theme: CustomTheme) => ({
       color: 'inherit',
       textDecoration: 'inherit',
     },
+  },
+  contactInfo: {
+    padding: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   formWrapper: {
     maxWidth: '56rem',
