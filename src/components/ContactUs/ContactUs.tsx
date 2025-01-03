@@ -32,7 +32,7 @@ const ContactUs = ({ withForm = false, setActiveNav, setSectionsElements }: { wi
       <div className={classes.container}>
         <div className={classes.header}>
           <h2 className={classes.title}>Contact Us</h2>
-          <p className={classes.subtitle}>Mobile: <a href='tel:+374 98 020304'>+374 98 02 03 04</a></p>
+          <p className={classes.subtitle}>Mobile: <a href='tel:+420 778 092 612'>+420 778 092 612</a></p>
           <p className={classes.subtitle}>Email address: <a href='mailto:tikoel@tikoel.com'>tikoel@tikoel.com</a></p>
         </div>
 
